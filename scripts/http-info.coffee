@@ -2,7 +2,7 @@
 #   Returns title and description when links are posted
 #
 # Dependencies:
-#   "jsdom": "~4.0.2"
+#   "jsdom": "~3.0.0"
 #   "underscore": "1.3.3"
 #
 # Configuration:
