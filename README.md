@@ -24,3 +24,7 @@ You can start hubot locally by running:
 ### Scripts
 
 * Adjusted version of @[odaillyjp](https://github.com/odaillyjp)'s [hubot-github-comments-notifier](https://github.com/odaillyjp/hubot-github-comments-notifier)
+
+## License
+
+[MIT](LICENSE)
