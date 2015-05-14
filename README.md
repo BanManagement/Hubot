@@ -17,7 +17,7 @@ deployed on [Heroku][heroku] to get you up and running as quick as possible.
 1. Clone this repository:  
   `git clone https://github.com/BanManagement/Hubot /opt/hubot`
 2. Install the sysVinit service if you are on Debian, etc.  
-  `ln -sf /opt/hubot/opt/hubot.sysvinit /etc/init.d/hubot`
+  `ln -sf /opt/hubot/opt/hubot.sysvinit /etc/init.d/hubot`  
   `chmod +x /etc/init.d/hubot`
 3. Add a unix user for the Bot:  
   `adduser hubot`  
