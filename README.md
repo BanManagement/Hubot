@@ -1,4 +1,6 @@
-# hubot-BanBot
+# Hubot
+
+[![Current tag](http://img.shields.io/github/tag/BanManagement/Hubot.svg)](https://github.com/BanManagement/Hubot/tags) [![Repository issues](http://issuestats.com/github/BanManagement/Hubot/badge/issue)](http://issuestats.com/github/BanManagement/Hubot) 
 
 Our customized hubot instance which is used in `#BanManger` IRC channel in the EsperNet.
 
@@ -10,7 +12,25 @@ deployed on [Heroku][heroku] to get you up and running as quick as possible.
 [hubot]: http://hubot.github.com
 [generator-hubot]: https://github.com/github/generator-hubot
 
-### Running hubot Locally
+## Installation
+
+1. Clone this repository:  
+  `git clone https://github.com/BanManagement/Hubot /opt/hubot`
+2. Install the sysVinit service if you are on Debian, etc.  
+  `ln -sf /opt/hubot/opt/hubot.sysvinit /etc/init.d/hubot`
+  `chmod +x /etc/init.d/hubot`
+3. Add a unix user for the Bot:  
+  `adduser hubot`
+  `chown hubto:hubot /opt/hubot`
+4. Install all node dependencies:  
+  `cd /opt/hubot`  
+  `npm install`
+5. Copy the default configuration file:  
+  `cp hubot.example.conf hubot.conf`
+6. Start the bot:  
+  `service hubot start`
+
+## Running hubot Locally
 
 You can test your hubot by running the following, however some plugins will not
 behave as expected unless the [environment variables](#configuration) they rely
@@ -18,12 +38,23 @@ upon have been set.
 
 You can start hubot locally by running:
 
-    % . ./hubot.conf
-    % bin/hubot
+    $ bin/hubot
 
-### Scripts
+## Scripts
 
 * Adjusted version of @[odaillyjp](https://github.com/odaillyjp)'s [hubot-github-comments-notifier](https://github.com/odaillyjp/hubot-github-comments-notifier)
+
+## Contributing
+
+1. Fork it
+2. Create your feature branch: `git checkout -b feature/my-new-feature`
+3. Commit your changes: `git commit -am 'Add some feature'`
+4. Push to the branch: `git push origin feature/my-new-feature`
+5. Submit a pull request
+
+## Version
+
+1.0.0
 
 ## License
 
