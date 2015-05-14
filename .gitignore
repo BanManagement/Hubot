@@ -1,7 +1,8 @@
 node_modules
 .DS_Store*
 .hubot_history
-run.sh
-hubot.log
-hubot.pid
+logs/**
+!logs/.gitkeep
+tmp/**
+!tmp/.gitkeep
 hubot.conf
