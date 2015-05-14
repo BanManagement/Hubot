@@ -2,7 +2,7 @@
 #   Returns title and description when links are posted
 #
 # Dependencies:
-#   "jsdom": "0.8.10"
+#   "jsdom": "~4.0.2"
 #   "underscore": "1.3.3"
 #
 # Configuration:
@@ -54,27 +54,8 @@ module.exports = (robot) ->
         else if title
           msg.send "#{title}"
 
-    versionCompare = (v1, v2, comparison) ->
-      v1parts = v1.split('.')
-      v2parts = v2.split('.')
-
-      for value1, i in v1parts
-        value1 = parseInt(value1, 10)
-        value2 = parseInt(v2parts[i], 10)
-        if comparison == '<' and value1 < value2
-          return 1
-        if comparison == '>' and value1 > value2
-          return 1
-      return 0
-
     unless ignore
-      if versionCompare jsdom.version, '0.7.0', '<'
-        jsdom.env
-          html: url
-          scripts: [ jquery ]
-          done: done
-      else
-        jsdom.env
-          url: url
-          scripts: [ jquery ]
-          done: done
+      jsdom.env
+        url: url
+        scripts: [ jquery ]
+        done: done
