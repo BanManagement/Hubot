@@ -43,6 +43,8 @@ You can start hubot locally by running:
 ## Scripts
 
 * Adjusted version of @[odaillyjp](https://github.com/odaillyjp)'s [hubot-github-comments-notifier](https://github.com/odaillyjp/hubot-github-comments-notifier)
+* Adjusted version of @[ajacksified](https://github.com/ajacksified)'s [http-info](https://github.com/github/hubot-scripts/blob/master/src/scripts/http-info.coffee) 
+* @[tenfef](https://github.com/tenfef)'s [github-issue-link](https://github.com/github/hubot-scripts/blob/master/src/scripts/github-issue-link.coffee)
 
 ## Contributing
 
