@@ -149,4 +149,7 @@ stripTags = (body) ->
   resolved_body
 
 buildMessage = (data, callback) ->
-  callback "#{data.user} #{data.action} #{data.eventType} #{data.url} - #{data.title}\n#{stripTags(data.body)}"
+  if process.env['HUBOT_GITHUB_COMMENTS_NOTIFIER_HIDE_COMMENT_BODY']
+    callback "#{data.user} #{data.action} #{data.eventType} #{data.url} - #{data.title}"
+  else
+    callback "#{data.user} #{data.action} #{data.eventType} #{data.url} - #{data.title}\n#{stripTags(data.body)}"
