@@ -9,6 +9,7 @@
 #   HUBOT_HTTP_INFO_IGNORE_URLS - RegEx used to exclude Urls
 #   HUBOT_HTTP_INFO_IGNORE_USERS - Comma-separated list of users to ignore
 #   HUBOT_HTTP_INFO_IGNORE_DESC - Optional boolean indicating whether a site's meta description should be ignored
+#   HUBOT_HTTP_INFO_NEWLINE_SEPARATOR - Optional split description and title in a new line (new message)
 #
 # Commands:
 #   http(s)://<site> - prints the title and meta description for sites linked.
@@ -49,7 +50,10 @@ module.exports = (robot) ->
         description = $('head meta[name=description]')?.attr('content')?.replace(/(\r\n|\n|\r)/gm,'')?.replace(/\s{2,}/g,' ')?.trim() || ''
 
         if title and description and not process.env.HUBOT_HTTP_INFO_IGNORE_DESC
-          msg.send "#{title}\n#{description}"
+          if process.env.HUBOT_HTTP_INFO_NEWLINE_SEPARATOR
+            msg.send "#{title}\n#{description}"
+          else
+            msg.send "#{title} - #{description}"
 
         else if title
           msg.send "#{title}"
