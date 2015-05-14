@@ -20,7 +20,7 @@ deployed on [Heroku][heroku] to get you up and running as quick as possible.
   `ln -sf /opt/hubot/opt/hubot.sysvinit /etc/init.d/hubot`
   `chmod +x /etc/init.d/hubot`
 3. Add a unix user for the Bot:  
-  `adduser hubot`
+  `adduser hubot`  
   `chown hubto:hubot /opt/hubot`
 4. Install all node dependencies:  
   `cd /opt/hubot`  
@@ -33,7 +33,7 @@ deployed on [Heroku][heroku] to get you up and running as quick as possible.
 ## Running hubot Locally
 
 You can test your hubot by running the following, however some plugins will not
-behave as expected unless the [environment variables](#configuration) they rely
+behave as expected unless the [environment variables](hubot.conf) they rely
 upon have been set.
 
 You can start hubot locally by running:
